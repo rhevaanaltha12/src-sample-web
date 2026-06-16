@@ -1,0 +1,52 @@
+@reference "tailwindcss";
+.rowBadge {
+   text-transform: capitalize;
+   border-radius: 20px;
+   padding: 4px 10px;
+   width: max-content;
+   font-size: 12px;
+   font-family: var(--font-jakarta);
+
+   &.Condition,
+   &.wrap-green {
+      background: var(--color-c-success-20);
+      color: var(--color-c-success-100);
+      font-weight: 500;
+   }
+
+   &.ParameterUpdate,
+   &.wrap-red {
+      background: var(--color-c-destructive-20);
+      color: var(--color-c-destructive-100);
+      font-weight: 500;
+   }
+
+   &.wrap-yellow {
+      background: var(--color-c-warning-20);
+      color: var(--color-c-warning-100);
+      font-weight: 500;
+   }
+
+   &.wrap-grey {
+      background: var(--color-c-neutral-30);
+      color: var(--color-c-neutral-60);
+      font-weight: 500;
+
+      &.line-through {
+         text-decoration: line-through;
+      }
+   }
+
+   &.Statement,
+   &.wrap-blue {
+      background: var(--color-c-primary-20);
+      color: var(--color-c-primary-100);
+      font-weight: 500;
+   }
+
+   &.wrap-purple {
+      background: var(--color-c-violet-20);
+      color: var(--color-c-violet-100);
+      font-weight: 500;
+   }
+}

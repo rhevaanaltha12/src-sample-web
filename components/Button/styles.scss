@@ -1,0 +1,183 @@
+@reference "tailwindcss";
+
+.ctm-btn {
+   font-family: var(--font-jakarta);
+   @apply flex rounded-md font-normal items-center justify-center text-sm cursor-pointer;
+
+   .p-button-label {
+      @apply flex-none;
+   }
+
+   .icon {
+      margin-right: 0.5rem;
+      width: 18px;
+      height: 18px;
+
+      &.btnIconRight {
+         margin-right: 0;
+         margin-left: 0.5rem;
+      }
+   }
+
+   & > .left {
+      margin-right: 4px;
+   }
+   & > .right {
+      margin-left: 4px;
+   }
+
+   &:disabled {
+      cursor: not-allowed;
+      opacity: 0.8;
+   }
+
+   &.solid {
+      color: white;
+      border: 1px solid var(--color-c-primary-50);
+      background: var(--color-c-primary-50);
+
+      &.primary {
+         &:hover {
+            background: var(--color-c-primary-60);
+            border: 1px solid var(--color-c-primary-60);
+         }
+         &:active {
+            background: var(--color-c-primary-70);
+            border: 1px solid var(--color-c-primary-70);
+         }
+         &:disabled {
+            background: var(--color-c-primary-10);
+            border: 1px solid var(--color-c-primary-10);
+            color: var(--color-c-primary-40);
+         }
+      }
+      &.sky {
+         border: 1px solid var(--color-c-blue-50);
+         background: var(--color-c-blue-50);
+         &:hover {
+            border: 1px solid var(--color-c-blue-60);
+            background: var(--color-c-blue-60);
+         }
+         &:active {
+            border: 1px solid var(--color-c-blue-70);
+            background: var(--color-c-blue-70);
+         }
+         &:disabled {
+            background: var(--color-c-blue-10);
+            border: 1px solid var(--color-c-blue-10);
+            color: var(--color-c-blue-40);
+         }
+      }
+      &.warning {
+         border: 1px solid var(--color-c-warning-50);
+         background: var(--color-c-warning-50);
+         &:hover {
+            border: 1px solid var(--color-c-warning-60);
+            background: var(--color-c-warning-60);
+         }
+         &:active {
+            border: 1px solid var(--color-c-warning-70);
+            background: var(--color-c-warning-70);
+         }
+         &:disabled {
+            background: var(--color-c-warning-10);
+            border: 1px solid var(--color-c-warning-10);
+            color: var(--color-c-warning-40);
+         }
+      }
+      &.danger {
+         border: 1px solid var(--color-c-destructive-50);
+         background: var(--color-c-destructive-50);
+         &:hover {
+            border: 1px solid var(--color-c-destructive-60);
+            background: var(--color-c-destructive-60);
+         }
+         &:active {
+            border: 1px solid var(--color-c-destructive-70);
+            background: var(--color-c-destructive-70);
+         }
+         &:disabled {
+            background: var(--color-c-destructive-10);
+            border: 1px solid var(--color-c-destructive-10);
+            color: var(--color-c-destructive-40);
+         }
+      }
+   }
+
+   &.normal {
+      color: var(--color-c-neutral-70);
+      background: var(--color-c-neutral-10);
+      border: 1px solid var(--color-c-neutral-40);
+      &:hover {
+         background: var(--color-c-neutral-20);
+      }
+      &:active {
+         background: var(--color-c-neutral-30);
+      }
+      &:disabled {
+         background: var(--color-c-neutral-20);
+         border: 1px solid var(--color-c-neutral-30);
+         color: var(--color-c-neutral-50);
+      }
+   }
+
+   &.xs {
+      padding: 6px 8px;
+      .p-button-label {
+         font-weight: 500;
+         font-size: 12px;
+      }
+
+      & > .pi {
+         font-size: 12px;
+      }
+   }
+   &.sm {
+      padding: 8px 12px;
+      .p-button-label {
+         font-weight: 500;
+         font-size: 14px;
+      }
+      &.less-width {
+         padding: 10px 16px;
+      }
+      & > .pi {
+         font-size: 14px;
+      }
+   }
+   &.md {
+      padding: 8px 12px;
+      .p-button-label {
+         font-weight: 500;
+         font-size: 16px;
+      }
+
+      & > .pi {
+         font-size: 16px;
+      }
+   }
+   &.lg {
+      padding: 8px 12px;
+
+      .p-button-label {
+         font-size: 18px;
+         font-weight: 500;
+      }
+      &.less-width {
+         padding: 10px 16px;
+      }
+      & > .pi {
+         font-size: 18px;
+      }
+   }
+
+   &:active {
+      outline: 0;
+      box-shadow: none;
+   }
+
+   &:focus {
+      outline: 0;
+      box-shadow: none;
+   }
+}

@@ -1,0 +1,141 @@
+@reference "tailwindcss";
+
+.dashboardOverview {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+
+   &__statGrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+
+      @media (max-width: 1024px) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 640px) {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__chartGrid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 16px;
+
+      @media (max-width: 1024px) {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__bottomGrid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 16px;
+
+      @media (max-width: 1024px) {
+         grid-template-columns: 1fr;
+      }
+   }
+}
+
+.dashboardOverview__welcome {
+   background: linear-gradient(135deg, var(--color-c-primary-50) 0%, var(--color-c-primary-70) 100%);
+   border-radius: 16px;
+   padding: 24px 28px;
+
+   .welcome__title {
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      font-family: var(--font-jakarta);
+   }
+
+   .welcome__sub {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-top: 4px;
+      font-family: var(--font-jakarta);
+   }
+}
+
+.dashboardCard {
+   background: linear-gradient(135deg, var(--color-c-gray-10) 0%, white 70%);
+   border-radius: 16px;
+   padding: 24px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05), 0 8px 24px rgba(0, 0, 0, 0.04);
+   border: 1px solid var(--color-c-neutral-20);
+
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+   }
+
+   &__title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      color: var(--color-c-neutral-80);
+      font-family: var(--font-jakarta);
+   }
+
+   &__legend {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      color: var(--color-c-neutral-60);
+      font-family: var(--font-jakarta);
+      font-weight: 500;
+   }
+}
+
+.legend-dot {
+   display: inline-block;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   margin-right: 4px;
+}
+
+.quickStats {
+   display: flex;
+   flex-direction: column;
+   gap: 0;
+
+   &__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--color-c-neutral-20);
+
+      &:last-child {
+         border-bottom: none;
+      }
+   }
+
+   &__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+   }
+
+   &__label {
+      flex: 1;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-c-neutral-70);
+      font-family: var(--font-jakarta);
+   }
+
+   &__value {
+      font-size: 22px;
+      font-weight: 800;
+      font-family: var(--font-jakarta);
+      letter-spacing: -0.5px;
+   }
+}

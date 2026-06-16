@@ -1,0 +1,35 @@
+@use '../../../public/css/var.scss' as var;
+
+.splitBtn * {
+   background: transparent !important;
+   border: 0 !important;
+   padding-right: 0 !important;
+   text-transform: capitalize !important;
+   padding-left: 0 !important;
+   outline: 0 !important;
+   color: black;
+   font-family: var.$font-primary;
+   font-size: 14px;
+   font-weight: 500;
+}
+
+.btn {
+   cursor: default !important;
+   pointer-events: none;
+}
+
+.menuBtn {
+   width: 2rem !important;
+   span {
+      font-size: 12px !important;
+   }
+}
+
+.menu {
+   font-size: 14px !important;
+}
+
+// buttonClassName	string	null	ClassName of the button.
+// menuStyle	string	null	Inline style of the overlay menu.
+// menuClassName	string	null	ClassName class of the overlay menu.
+// menuButtonClassName	string	null	ClassName of the menu dropdown button.

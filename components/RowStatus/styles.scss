@@ -1,0 +1,83 @@
+@reference "tailwindcss";
+.rowStatus {
+   display: grid;
+   grid-template-columns: 6px 1fr;
+   column-gap: 6px;
+   align-items: center;
+   text-transform: capitalize;
+
+   &.finished,
+   &.Active,
+   &.active,
+   &.completed,
+   &.delivered,
+   &.paid {
+      color: var(--color-c-primary-60);
+      .statusDot {
+         background: var(--color-c-primary-60);
+      }
+   }
+   &.failed,
+   &.rejected,
+   &.cancelled,
+   &.unpaid,
+   &.inactive {
+      color: var(--color-c-destructive-70);
+      .statusDot {
+         background: var(--color-c-destructive-70);
+      }
+   }
+   &.waiting {
+      color: var(--color-c-neutral-50);
+      .statusDot {
+         background: var(--color-c-neutral-50);
+      }
+   }
+   &.created,
+   &.updated,
+   &.checked,
+   &.approved {
+      color: var(--color-c-primary-70);
+      .statusDot {
+         background: var(--color-c-primary-70);
+      }
+   }
+   &.onProgress,
+   &.sync,
+   &.pending {
+      color: var(--color-c-warning-60);
+      .statusDot {
+         background: var(--color-c-warning-60);
+      }
+   }
+
+   .statusDot {
+      position: relative;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #666;
+      flex-shrink: 0;
+
+      .statusPing {
+         position: absolute;
+         inset: 0;
+         border-radius: 50%;
+         background: currentColor;
+         animation: statusPing 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+         opacity: 0.6;
+      }
+   }
+}
+
+@keyframes statusPing {
+   0% {
+      transform: scale(1);
+      opacity: 0.6;
+   }
+   75%,
+   100% {
+      transform: scale(2.5);
+      opacity: 0;
+   }
+}

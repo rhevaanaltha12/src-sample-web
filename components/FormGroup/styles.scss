@@ -1,0 +1,49 @@
+@reference "tailwindcss";
+
+.formLayoutGroup {
+   .formLayoutWrapper {
+      &.gridComp {
+         display: grid;
+         grid-template-columns: 280px auto;
+         gap: 24px;
+      }
+
+      .header {
+         .headerIcon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--color-c-primary-10);
+            color: var(--color-c-primary-70);
+            margin-bottom: 10px;
+         }
+
+         .title {
+            font-family: var(--font-jakarta);
+            color: var(--color-c-neutral-80);
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 24px;
+         }
+
+         .desc {
+            font-family: var(--font-jakarta);
+            color: var(--color-c-neutral-60);
+            font-size: 12px;
+            margin-bottom: 20px;
+            line-height: 20px;
+         }
+      }
+   }
+
+   .line {
+      border: none;
+      border-top: 1px solid var(--color-c-neutral-20);
+      margin-top: 8px;
+      margin-bottom: 20px;
+   }
+}

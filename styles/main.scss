@@ -1,0 +1,54 @@
+@use './primeCustom.scss' as prime;
+
+@reference "tailwindcss";
+
+.ctm-field {
+   margin-bottom: 16px;
+
+   &.plain {
+      display: grid;
+      grid-template-columns: 183px auto;
+      align-items: center;
+   }
+
+   .ctm-label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--color-c-neutral-50);
+      font-size: 12px;
+      font-weight: 500;
+   }
+
+   input,
+   textarea {
+      width: 100%;
+   }
+
+   textarea {
+      height: 65px;
+   }
+
+   &.field-checkbox {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      column-gap: 12px;
+      align-items: center;
+
+      label {
+         font-size: 12px;
+         font-weight: 500;
+         margin-bottom: 2px;
+         color: var(--color-c-neutral-70);
+
+         &.disabled {
+            color: var(--color-c-neutral-50);
+         }
+      }
+
+      &:hover {
+         .p-checkbox-box {
+            border: 2px solid var(--color-c-primary-50);
+         }
+      }
+   }
+}

@@ -1,0 +1,43 @@
+@reference "tailwindcss";
+
+.emptyState {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 48px 24px;
+   text-align: center;
+   gap: 8px;
+
+   &__iconWrap {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: var(--color-c-neutral-20);
+      color: var(--color-c-neutral-50);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+   }
+
+   &__title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-c-neutral-80);
+      font-family: var(--font-jakarta);
+   }
+
+   &__desc {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--color-c-neutral-50);
+      font-family: var(--font-jakarta);
+      max-width: 280px;
+      line-height: 1.5;
+   }
+
+   &__action {
+      margin-top: 8px;
+   }
+}

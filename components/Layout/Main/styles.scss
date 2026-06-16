@@ -1,0 +1,22 @@
+@reference "tailwindcss";
+
+$topbar-height: 68px;
+$ease: cubic-bezier(0.4, 0, 0.2, 1);
+$t: 0.25s $ease;
+
+.mainLayout {
+  min-height: 100vh;
+  background: var(--color-c-neutral-20);
+}
+
+.mainContent {
+  padding: $topbar-height 24px 24px;
+  min-height: 100vh;
+  transition: margin-left $t;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 72px !important;
+  }
+}
